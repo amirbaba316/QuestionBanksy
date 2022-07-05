@@ -46,7 +46,7 @@
     <div class="container my-4" id="ques">
         <h2 class="text-center my-4">Browse Categories</h2>
         <div class="row my-4">
-            <?php 
+         <?php 
          $sql = "SELECT * FROM `category`"; 
          $result = mysqli_query($conn, $sql);
          while($row = mysqli_fetch_assoc($result)){
@@ -59,7 +59,7 @@
                   <div class="card-body">
                     <h5 class="card-title">' . $cat . '</h5>
                     <p class="card-text">' . substr($desc,0,80) . '...</p>
-                    <a href="#" class="btn btn-dark">View Quiz</a>
+                    <a href="questions.php?category_name='. $cat .'" class="btn btn-dark">View Quiz</a>
                   </div>
                   </div>
                 </div>';
